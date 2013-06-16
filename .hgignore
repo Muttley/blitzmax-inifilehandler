@@ -1,0 +1,15 @@
+syntax: glob
+
+*-results.log
+*.a
+*.bak
+*.exe
+*.i
+*.layout
+*.log
+*.o
+*.orig
+*.s
+*.sublime-workspace
+.gradle
+commands.html
