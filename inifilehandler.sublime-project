@@ -15,6 +15,12 @@
 			"shell": "true"
 		},
 		{
+			"name": "Gradle: Run muttley.inifilehandler Module Example",
+			"cmd": ["gradle", "--daemon", "run_examples"],
+			"working_dir": "${project_path}/commandstack.mod",
+			"shell": "true"
+		},
+		{
 			"name": "Gradle: Run muttley.inifilehandler Module Tests",
 			"cmd": ["gradle", "--daemon", "run_tests"],
 			"working_dir": "${project_path}/inifilehandler.mod",

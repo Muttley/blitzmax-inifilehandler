@@ -1,4 +1,6 @@
 def MODULE_NAME = "muttley.inifilehandler"
+
+def EXAMPLE_MAIN = "Example/Main.bmx"
 def TEST_MAIN   = "UnitTests/Main.bmx"
 
 task build_module << {
@@ -9,13 +11,25 @@ task build_module << {
 
 	def proc = command.execute()
 	proc.in.eachLine  {line -> println line}
-	proc.err.eachLine {line -> println 'ERROR: ' + line}
+	proc.err.eachLine {line -> println line}
 	proc.waitFor()
 
 	def exitValue = proc.exitValue()
 	if (exitValue != 0) {
 		throw new GradleException ("Build module failed with exit code: $exitValue")
 	}
+}
+
+task run_examples (dependsOn: ['build_module', 'run_tests']) << {
+	println "Building examples...\n"
+
+	def command = "bmk makeapp -r -a -t gui -x $EXAMPLE_MAIN"
+	print "Running command: '$command'\n"
+
+	def proc = command.execute()
+	proc.in.eachLine  {line -> println line}
+	proc.err.eachLine {line -> println line}
+	proc.waitFor()
 }
 
 task run_tests (dependsOn: 'build_module') << {
@@ -26,6 +40,6 @@ task run_tests (dependsOn: 'build_module') << {
 
 	def proc = command.execute()
 	proc.in.eachLine  {line -> println line}
-	proc.err.eachLine {line -> println 'ERROR: ' + line}
+	proc.err.eachLine {line -> println line}
 	proc.waitFor()
 }
