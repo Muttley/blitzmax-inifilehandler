@@ -3,7 +3,7 @@ SuperStrict
 Import muttley.inifilehandler
 
 ' Create handler.  config.ini is actually the default name
-Local configFile:TINIFile = TINIFile.Create ("config.ini")
+Local configFile:TINIFile = TINIFile.Create ("Data/config.ini")
 
 ' Once youve created the handler, you can load the file up.  If the Load()
 ' method returns False then it was unable to load the config file and you
