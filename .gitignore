@@ -1,8 +1,10 @@
+**/.bmx
 *-results.log
 *.a
 *.bak
 *.exe
 *.i
+*.i2
 *.layout
 *.log
 *.o
