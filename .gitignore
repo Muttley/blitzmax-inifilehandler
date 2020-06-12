@@ -1,4 +1,5 @@
 **/.bmx
+**/Example/generated.ini
 *-results.log
 *.a
 *.bak
