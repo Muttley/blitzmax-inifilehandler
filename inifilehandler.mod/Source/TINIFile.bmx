@@ -138,7 +138,7 @@ Type TINIFile
 
 	Rem
 	bbdoc: Get an Int array of all Boolean values from a parameter
-	Returns: Byte[]
+	Returns: Int[]
 	EndRem
 	Method GetBoolValues:Int[] (sectionName:String, parameterName:String, defaultValues:String[] = Null)
 		Local boolValues:Int[] = Null

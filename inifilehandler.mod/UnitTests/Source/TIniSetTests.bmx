@@ -33,7 +33,7 @@ Type TIniSetTests Extends TTest
 		Local value:String = "test_bad_value"
 		Local expected:Int = False
 
-		local exceptionRaised:int = false
+		Local exceptionRaised:Int = False
 
 		Try
 			iniFile_.SetBoolValue(section_, parameter, value)
@@ -53,7 +53,7 @@ Type TIniSetTests Extends TTest
 		Local values:String[] = ["true", "test_bad_value", "true"]
 		Local expected:Int[] = [True]
 
-		local exceptionRaised:int = false
+		Local exceptionRaised:Int = False
 
 		Try
 			iniFile_.SetBoolValues(section_, parameter, values)
@@ -256,7 +256,7 @@ Type TIniSetTests Extends TTest
 
 	Method TestSetStringValues() {test}
 		Local parameter:String = section_ + "-Strings"
-		Local expected:String[] = ["This"."is", "my", "test", "string.", "Will", "it", "work?"]
+		Local expected:String[] = ["This", "is", "my", "test", "string.", "Will", "it", "work?"]
 		assertTrue(iniFile_.SetStringValues(section_, parameter, expected))
 		SaveAndReload()
 		Local actual:String[] = iniFile_.GetStringValues(section_, parameter)

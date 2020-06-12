@@ -45,8 +45,8 @@ which show how the inifilehandler module is used.
 
 # Sublime Project
 
-For [Sublime Text 2][1] users there is a project file which can be used if you
-wish modify this module in any way.  The project file includes build systems
+For [Sublime Text][1] users there is a project file which can be used if you
+wish to modify this module in any way.  The project file includes build systems
 for building the module, and building and running the Unit Tests.  These build
 systems rely on the [Gradle][2] build automation system.
 

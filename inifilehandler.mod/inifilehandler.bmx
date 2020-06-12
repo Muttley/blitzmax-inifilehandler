@@ -17,13 +17,15 @@ End Rem
 Module muttley.inifilehandler
 
 ModuleInfo "Name: muttley.inifilehandler"
-ModuleInfo "Version: 1.1.1"
+ModuleInfo "Version: 1.1.2"
 ModuleInfo "License: Artistic License 2.0"
 ModuleInfo "Author: Paul Maskelyne (Muttley)"
 ModuleInfo "Copyright: (C) 2007-2013 Paul Maskelyne"
 ModuleInfo "E-Mail: muttley@muttleyville.org"
 ModuleInfo "Website: http://www.muttleyville.org"
 
+ModuleInfo "History: 1.1.2"
+ModuleInfo "History: Minor fixes to work with bmx-ng"
 ModuleInfo "History: 1.1.1"
 ModuleInfo "History: Migration to bitbucket"
 ModuleInfo "History: 1.1.0"
@@ -50,7 +52,6 @@ Import brl.system
 Import brl.standardio
 Import brl.retro
 Import brl.linkedlist
-Import brl.data
 
 Include "Source\TINIFile.bmx"
 Include "Source\TINIParameter.bmx"
